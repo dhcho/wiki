@@ -12,3 +12,11 @@
 본론 : Tasklet
 간단하게 생각하면, Spring Batch에서는 Job이 있습니다. Job은 여러개의 Step으로 구성되고, Step 은 Tasklet(기능) 으로 구성됩니다. 배치 작업 하나가 Job에 해당 됩니다. 즉 다음과 같은 그림입니다.
 <img src="https://github.com/dhcho/document/blob/main/images/springbatch%231.png"/>
+
+그런데 저는 실행 전후에 하고 싶은 일이 있습니다. 실행 전에는 유저 목록을 불러와놓고 싶기때문입니다. 이를 위해서 StepExecutionListener 를 함께 구현합니다. 이를 구현하면 beforeStep과 afterStep을 사용해서 Step 전후에 원하는 일을 할 수 있습니다.
+
+차례대로 beforeStep, execute, afterStep 순으로 실행됩니다.
+
+배치 어플리케이션은 기본적으로 1. 읽어서 2. 작업하고 3. 그 결과를 다시 저장하는 것이 대부분이기 때문에 제가 본 코드들은 대부분 item reader - processor - writer의 과정을 거칩니다.
+
+다만 가볍고 몇줄되지 않는 작업이며, writer 가 불필요한 경우 (위의 경우처럼) 이렇게 tasklet으로 처리하는 것도 좋은 선택인 것 같습니다.
