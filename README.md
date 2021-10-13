@@ -1,1 +1,1 @@
-# 기술정리 Repository
+# Tech Summary Repository
