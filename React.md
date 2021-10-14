@@ -24,3 +24,87 @@
 1. state, lifeCycle 관련 기능사용 불가능 [Hook을 통해 해결 됨]
 2. 메모리 자원을 함수형 컴포넌트보다 덜 사용한다.
 3. 컴포넌트 선언이 편하다.
+
+
+# Recoil - 또 다른 React 상태 관리 라이브러리
+Recoil은 무엇이 다를까?
+우선 첫번째, Recoil은 배우기 쉽다. API가 단순하고 이미 hook을 사용하고 있는 사람들에게 익숙할 것이다. Recoil을 시작하기 위해서는 어플리케이션을 RecoilRoot로 감싸고, 데이터를 atom이라는 단위로 선언하여 useState를 Recoil의 useRecoilState로 대체해야 한다.
+
+두번째, 컴포넌트가 사용하는 데이터 조각만 사용할 수 있고, 계산된 selector를 선언할 수 있으며, 비동기 데이터 흐름을 위한 내장 솔루션까지 제공한다.
+
+동적 키로 atom을 만들고, selector에 인자를 보내는 등 모두 간단하게 할 수 있다.
+
+그리고 앞에서 말한 바와 같이 곧 React 동시성 모드에 대한 지원도 될 것이다.
+
+Recoil의 기본부터 시작해보자
+Atom — atom은 하나의 상태의라고 볼 수 있다. 컴포넌트가 구독할 수 있는 React state라고 생각하면 된다. atom의 값을 변경하면 그것을 구독하고 있는 컴포넌트들이 모두 다시 렌더링된다. atom을 생성하기 위해 어플리케이션에서 고유한 키 값과 디폴트 값을 설정해야한다. 디폴트 값은 정적인 값, 함수 또는 심지어 비동기 함수(나중에 지원 예정)가 될 수 있다.
+```
+export const nameState = atom({
+  key: 'nameState',
+  default: 'Jane Doe'
+});
+```
+useRecoilState — atom의 값을 구독하여 업데이트할 수 있는 hook. useState와 동일한 방식으로 사용할 수 있다.
+
+useRecoilValue — setter 함수 없이 atom의 값을 반환만 한다.
+
+useSetRecoilState — setter 함수만 반환한다.
+```
+import {nameState} from './someplace'
+// useRecoilState
+const NameInput = () => {
+  const [name, setName] = useRecoilState(nameState);
+  const onChange = (event) => {
+   setName(event.target.value);
+  };
+  return <>
+   <input type="text" value={name} onChange={onChange} />
+   <div>Name: {name}</div>
+  </>;
+}
+// useRecoilValue
+const SomeOtherComponentWithName = () => {
+  const name = useRecoilValue(nameState);
+  return <div>{name}</div>;
+}
+// useSetRecoilState  
+const SomeOtherComponentThatSetsName = () => {
+  const setName = useSetRecoilState(nameState);
+  return <button onClick={() => setName('Jon Doe')}>Set Name</button>;
+}
+```
+selector — seletor는 상태에서 파생된 데이터로, 다른 atom에 의존하는 동적인 데이터를 만들 수 있게 해준다. Recoil의 selector는 기존에 우리가 알던 selector의 개념과는 조금 다르다. Redux의 reselect와 MobX의 @computed처럼 동작하는 "get" 함수를 가지고 있다. 하지만 하나 이상의 atom을 업데이트 할 수 있는 "set" 함수를 옵션으로 받을 수 있다. 이 부분은 나중에 다룰 테니, 일단 "selector" 부분만 살펴보자.
+
+// 동물 목록 상태
+```
+const animalsState = atom({
+  key: 'animalsState',
+  default: [{
+    name: 'Rexy',
+    type: 'Dog'
+  }, {
+    name: 'Oscar',
+    type: 'Cat'
+  }],
+});
+// 필터링 동물 상태
+const animalFilterState = atom({
+ key: 'animalFilterState',
+ default: 'dog',
+});
+// 파생된 동물 필터링 목록
+const filteredAnimalsState = selector({
+ key: 'animalListState',
+ get: ({get}) => {
+   const filter = get(animalFilterState);
+   const animals = get(animalsState);
+   
+   return animals.filter(animal => animal.type === filter);
+ }
+});
+// 필터링된 동물 목록을 사용하는 컴포넌트
+const Animals = () => {
+  const animals = useRecoilValue(filteredAnimalsState);
+  return animals.map(animal => (<div>{ animal.name }, { animal.type    }</div>));
+}
+```
