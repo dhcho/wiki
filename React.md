@@ -74,9 +74,8 @@ const SomeOtherComponentThatSetsName = () => {
 }
 ```
 selector — seletor는 상태에서 파생된 데이터로, 다른 atom에 의존하는 동적인 데이터를 만들 수 있게 해준다. Recoil의 selector는 기존에 우리가 알던 selector의 개념과는 조금 다르다. Redux의 reselect와 MobX의 @computed처럼 동작하는 "get" 함수를 가지고 있다. 하지만 하나 이상의 atom을 업데이트 할 수 있는 "set" 함수를 옵션으로 받을 수 있다. 이 부분은 나중에 다룰 테니, 일단 "selector" 부분만 살펴보자.
-
-// 동물 목록 상태
 ```
+// 동물 목록 상태
 const animalsState = atom({
   key: 'animalsState',
   default: [{
