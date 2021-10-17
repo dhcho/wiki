@@ -26,17 +26,17 @@
 
 ## OSI 7 Layer
 <img src="https://github.com/dhcho/document/blob/main/images/osi7layer.png">
-OSI 7 계층을 나누는 이유는 무엇일까?
+# OSI 7 계층을 나누는 이유는 무엇일까?
 
 중요한 목적은 표준과 학습 도구라 할 수 있다. 표준화를 통해 이질적인 포트 문제나 프로토콜 등으로 인한 문제를 해결하여 비용을 절감했다. 또한, 계층별의 기능과 통신 과정을 단계별로 나누어서 쉽게 알 수 있고, 특정한 곳에 이상이 생기면 그 단계만 수정할 수 있기 때문에 편리하다.
 
-1) 물리(Physical)
+# 1) 물리(Physical)
 
 리피터, 케이블, 허브 등
 
 주로 전기적, 기계적, 기능적인 특성을 이용해서 통신 케이블로 데이터를 전송하는 역할을 한다.
 
-2) 데이터 링크(Data Link)
+# 2) 데이터 링크(Data Link)
 
 브릿지, 스위치 등
 
@@ -46,7 +46,7 @@ MAC 주소를 이용해 통신한다.
 
 Frame에 MAC 주소를 부여하고 에러검출, 재전송, 흐름 제어를 진행한다.
 
-3) 네트워크(Network)
+# 3) 네트워크(Network)
 
 라우터, IP
 
@@ -56,7 +56,7 @@ Frame에 MAC 주소를 부여하고 에러검출, 재전송, 흐름 제어를 �
 
 라우팅, 흐름 제어, 오류 제어, 세그먼테이션 등을 수행한다.
 
-4) 전송 계층(Transport)
+# 4) 전송 계층(Transport)
 
 TCP, UDP
 
@@ -64,7 +64,7 @@ TCP, UDP 프로토콜을 통해 통신을 활성화 한다. 포트를 열어두�
 
 TCP : 신뢰성, 연결 지향적
 UDP : 비신뢰성, 비연결성, 실시간
-5)세션(Session)
+# 5)세션(Session)
 
 API, Socket
 
@@ -74,7 +74,7 @@ API, Socket
 
 TCP/IP 세션을 만들고 없애는 책임을 지니고 있다.
 
-6) 표현(Presentation)
+# 6) 표현(Presentation)
 
 JPEG, MPEG 등
 
@@ -84,7 +84,7 @@ JPEG, MPEG 등
 
 파일 인코딩, 명령어를 포장, 압축, 암호화한다.
 
-7) 응용(Application)
+# 7) 응용(Application)
 
 HTTP, FTP, DNS 등
 
