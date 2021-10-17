@@ -24,6 +24,18 @@
 간단히 프레임워크는 가져다가 사용한다는 것보다는 프레임워크라는 특정 공간에 들어가서 사용한다는 느낌이 더 강하다고 말할 수 있으며 
 라이브러리는 라이브러리 자체를 가져가 사용하고 호출하는 용도로 사용된다고 생각하시면 쉽게 이해하실 수 있을 것입니다.
 
+## REST & RESTful이란?
+
+REST란 Representational State Transfer의 약자로 웹의 장점을 최대한 활용할 수 있는 Client와 Server 간 통신 방식 중 하나이다.
+
+
+
+설계 기본 규칙으로 HTTP URI를 통해 자원을 명시하고 HTTP method(GET, POST, PUT, DELETE)를 통해 자원을 처리하도록 설계된 아키텍처이다.
+
+
+
+RESTful은 REST라는 아키텍처를 구현하는 웹 서비스를 나타내는 것으로 REST 원리를 따르는 시스템을 RESTful이라는 용어로 지칭한다.
+
 ## OSI 7 Layer
 <img src="https://github.com/dhcho/document/blob/main/images/osi7layer.png">
 
