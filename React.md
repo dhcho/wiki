@@ -27,6 +27,7 @@
 
 
 # Recoil - 또 다른 React 상태 관리 라이브러리
+<img src="https://github.com/dhcho/document/blob/main/images/recoil.jpeg">
 Recoil은 무엇이 다를까?
 우선 첫번째, Recoil은 배우기 쉽다. API가 단순하고 이미 hook을 사용하고 있는 사람들에게 익숙할 것이다. Recoil을 시작하기 위해서는 어플리케이션을 RecoilRoot로 감싸고, 데이터를 atom이라는 단위로 선언하여 useState를 Recoil의 useRecoilState로 대체해야 한다.
 
