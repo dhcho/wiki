@@ -10,7 +10,7 @@ $ sudo apt install npm
 $ sudo apt-get install openjdk-11-jdk
 ```
 
-* Java Version 확인
+* Java version 확인
 
 ```
 $ java -version
