@@ -16,6 +16,18 @@ $ sudo apt-get install openjdk-11-jdk
 $ java -version
 ```
 
+# Git 설치
+
+```
+$ sudo npm install -y git
+```
+
+* Git version 확인
+
+```
+$ git --version
+```
+
 # Maven 설치
 
 ```
