@@ -10,7 +10,7 @@ $ sudo apt install npm
 $ sudo apt-get install openjdk-11-jdk
 ```
 
-## Java Version 확인
+* Java Version 확인
 
 ```
 $ java -version
@@ -22,7 +22,7 @@ $ java -version
 $ sudo apt-get install maven
 ```
 
-## Maven build
+* Maven build
 
 ```
 $ mvn clean package
