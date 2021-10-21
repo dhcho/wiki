@@ -111,7 +111,7 @@ https://aws.amazon.com/free
 
 고정 IP를 할당받아야 합니다. 왼쪽 메뉴에서 “탄력적 IP”를 선택합니다.
 
-<span style="color:red">이 부분은 추가 요금이 할당되니 주의하세요.</span>
+# 이 부분은 추가 요금이 할당되니 주의하세요.
 
 <img src="https://github.com/dhcho/document/blob/main/images/aws/%2322.png"/>
 
