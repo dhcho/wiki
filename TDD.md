@@ -11,7 +11,7 @@
 <br>
 
 
-![img](https://mblogthumb-phinf.pstatic.net/MjAxNzA2MjhfMTU0/MDAxNDk4NjA2NTAyNjU2.zKGh5ZuYgToTz6p1lWgMC_Xb30i7uU86Yh00N2XrpMwg.8b3X9cCS6_ijzWyXEiQFombsWM1J8FlU9LhQ2j0nanog.PNG.suresofttech/image.png?type=w800)
+<img src="https://github.com/dhcho/document/blob/main/images/TDD/%231.png"/>
 
 
 <br>
@@ -19,7 +19,7 @@
 <br>
 
 
-![img](https://mblogthumb-phinf.pstatic.net/MjAxNzA2MjhfMjE3/MDAxNDk4NjA2NTExNDgw.fp8XF9y__Kz75n86xknIPDthTHj9a8Q08ocIJIqMR6Ag.24jJa_8_T0Qj04P62FZbchqt8oTNXGFSLUItzMP95s8g.PNG.suresofttech/image.png?type=w800)
+<img src="https://github.com/dhcho/document/blob/main/images/TDD/%232.png"/>
 <br>
 ```
 작가가 책을 쓰는 과정에 대해서 생각해보자.
@@ -192,7 +192,7 @@ public class SimpleScoreStrategy implements ScoreStrategy {
 <br>
 <br>
 
-![img](https://mblogthumb-phinf.pstatic.net/MjAxNzA2MjhfMjQx/MDAxNDk4NjA2NjM0MzIw.LGPVpvam5De7ibWipMqiGHZPjRcKWQKYhLbKgnL6i78g.8vplllDO1pfKFs5Wua9ZLl7b6g6kHbjG-6M--HmDRCwg.PNG.suresofttech/image.png?type=w800)
+<img src="https://github.com/dhcho/document/blob/main/images/TDD/%233.png"/>
 
 <br>
 <br>
@@ -210,4 +210,4 @@ TDD를 활용하면, 처음 시작하는 단계에서 테스트케이스를 설�
 
 또한 안전성이 필요한 소프트웨어 프로젝트에서는 개발 초기 단계부터 확실하게 다져놓고 가는 것이 중요하다. 
 
-유지보수 비용이 더 크거나 비행기, 기차에 필요한 소프트웨어 등 안전성이 중요한 프로젝트의 경우 현재 실무에서도 TDD를 활용한 개발을 통해 이루어지고 있다.
+유지보수 비용이 더 크거나 비행기, 기차에 필요한 소프트웨어 등 안전성이 중요한 프로젝트의 경우 현재 실무에서도 TDD를 활용한 개발이 이뤄지고 있다.
