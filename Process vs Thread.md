@@ -12,7 +12,7 @@
 
 <br>
 
-<img src=""/>
+<img src="https://github.com/dhcho/document/blob/main/images/OS/process_thread.jpg"/>
 
 
 프로세스는 각각 별도의 주소공간 할당 (독립적)
