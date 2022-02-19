@@ -7,6 +7,12 @@ contentEditable을 사용하면 브라우저가 자체적으로 클립보드, �
 편집 모드 변경 시 input이나 textarea로 수정할 필요없이 간단하게 contentEditable=true 속성만 추가해줘도 편집 모드로 변경할 수 있다. 
 때문에 div를 input으로 바꿨을 때 발생할 수 있는 스타일 변경을 신경쓰지 않아도 되어 편리하다.
 
+### div element
+<img src="https://github.com/dhcho/wiki/blob/main/images/React/1.png?raw=true">
+
+### div contentEditable={true}
+<img src="https://github.com/dhcho/wiki/blob/main/images/React/2.png?raw=true">
+
 하지만 contentEditable은 React에서 사용할 때 꽤나 문제가 많았다. 
 input과 동작 방식이 다르기 때문이다. 
 먼저, 입력 시 change event가 아니라 input event가 동작한다. 
