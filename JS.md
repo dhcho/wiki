@@ -73,3 +73,5 @@ export const focusContentEditableTextToEnd = (element: HTMLElement) => {
 하지만 작성된 내용이 있는 경우에는 포커스를 가장 뒤쪽에 붙이기 위해 현재 Caret(커서)의 위치를 변경해줘야 한다. 
 caret의 위치를 찾고 contentEditable의 range(드래그 된 영역)를 맨 끝으로 이동시킨다. 
 마지막으로 기존 range를 삭제하고 새로운 range를 추가함으로써 contentEditable 내용 끝에 커서를 위치 시킬 수 있다.
+
+origin link : https://yung-developer.tistory.com/109
