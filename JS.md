@@ -13,7 +13,7 @@ JSON.stringify(k1) === JSON.stringify(k2); // true
 _.isEqual(k1, k2); // true
 ```
 - Deep Nested 비교
-  조금더 복잡하고 중첩되어진 Object를 비교하여도 제대로된 결과를 얻을수 있습니다.
+- 조금더 복잡하고 중첩되어진 Object를 비교하여도 제대로된 결과를 얻을수 있습니다.
 ```
 const one = {
   fruit: '🥝',
@@ -47,8 +47,8 @@ _.isEqual(one, two); // true
  2. 깊고 복잡한 비교를 했을경우는 Lodash 방식인 isEqual함수를 쓰는것이 좋은것 같다.
 
 - 결론 보충내용
- JSON.stringify : string 비교를 하므로 Object 전체를 비교.
- Lodash : Object 전체 비교하지 않고 비교 중 다른 부분이 있으면 함수 종료
+- JSON.stringify : string 비교를 하므로 Object 전체를 비교.
+- Lodash : Object 전체 비교하지 않고 비교 중 다른 부분이 있으면 함수 종료
 
  부록 내용: ES6 방법으로 entries를 이용하여서 비교 할 수도 있음
 ```
