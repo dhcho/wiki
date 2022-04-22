@@ -63,6 +63,7 @@ Object.entries(k1).toString() === Object.entries(k2).toString();
 - https://akashicseer.com/web-development/javascript-and-contenteditable-how-to-move-the-cursor-to-the-end-of-user-input/
 
 # JS 주석
+```
 /**
  * @description 전화번호를 입력하면 적합한 전화번호 형태로 변경해준다.
  * @param  {string} telNo ( 예 : 01000000000 )
@@ -83,4 +84,4 @@ export function commonTelNoFormat(telNo: string) {
     return telNo;
   }
 }
-
+```
