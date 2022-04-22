@@ -61,3 +61,26 @@ Object.entries(k1).toString() === Object.entries(k2).toString();
 
 # div contenteditable cursor focus
 - https://akashicseer.com/web-development/javascript-and-contenteditable-how-to-move-the-cursor-to-the-end-of-user-input/
+
+# JS 주석
+/**
+ * @description 전화번호를 입력하면 적합한 전화번호 형태로 변경해준다.
+ * @param  {string} telNo ( 예 : 01000000000 )
+ * @return {string} 010-0000-0000 형태의 전화번호
+ * @example ( param: 01000000000 => return: "010-0000-0000" )
+ */
+export function commonTelNoFormat(telNo: string) {
+  function isNumeric(val) {
+    return /^-?\d+$/.test(val);
+  }
+
+  if (isNumeric(telNo.replace(/\-/g, ''))) {
+    return telNo
+      .replace(/[^0-9]/g, '')
+      .replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/, '$1-$2-$3')
+      .replace('--', '-');
+  } else {
+    return telNo;
+  }
+}
+
