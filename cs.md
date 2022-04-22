@@ -108,5 +108,5 @@ HTTP, FTP, DNS 등
 사용자 인터페이스, 전자우편, 데이터베이스 관리 등의 서비스를 제공한다.
 
 ## 모노레포
-https://d2.naver.com/helloworld/0923884
-https://d2.naver.com/helloworld/7553804
+- https://d2.naver.com/helloworld/0923884
+- https://d2.naver.com/helloworld/7553804
