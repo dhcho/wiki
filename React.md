@@ -189,4 +189,4 @@ origin link : https://yung-developer.tistory.com/109
 
 # 리액트 코딩 컨벤션
 - https://3-stack.tistory.com/53
-- - https://velog.io/@welloff_jj/React-Design-Pattern-Presentational-and-Container-Atomic-Design
+- https://velog.io/@welloff_jj/React-Design-Pattern-Presentational-and-Container-Atomic-Design
