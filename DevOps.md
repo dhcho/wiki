@@ -1,5 +1,7 @@
 ## 데브옵스(DevOps)
 
+<img src="https://github.com/dhcho/wiki/blob/main/images/devops.jpg"/>
+
 <br>
 
 > Development + Operations의 합성어
